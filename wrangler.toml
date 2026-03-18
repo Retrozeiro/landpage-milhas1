@@ -1,7 +1,10 @@
 name = 'milhas-page'
 compatibility_date = "2026-03-18"
+main = "src/index.ts"
 
-pages_build_output_dir = "public"
+[assets]
+directory = "./public"
+binding = "ASSETS"
 
 [[d1_databases]]
 binding = "DB"
@@ -26,5 +29,3 @@ SOCIAL_X = ""
 GOOGLE_CLIENT_ID = ""
 GOOGLE_CLIENT_SECRET = ""
 OAUTH_REDIRECT_URL = "http://localhost:8788/auth/callback"
-
-main = "src/index.ts"

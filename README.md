@@ -87,6 +87,14 @@ Bindings necessários no projeto:
 - R2: `ART_BUCKET`
 - Vars: mesmas do `.dev.vars`
 
+## Deploy (Cloudflare Workers)
+
+Se seu pipeline roda `wrangler deploy`, este projeto também pode ser publicado como **Worker** (servindo os arquivos estáticos de `public/` via `[assets]` e usando o código de `functions/` como handlers):
+
+```bash
+npx wrangler deploy
+```
+
 ## Google OAuth (login YouTube)
 
 No Google Cloud Console, crie credenciais OAuth do tipo “Web application” e adicione os redirect URIs:
