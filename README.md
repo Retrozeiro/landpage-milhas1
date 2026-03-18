@@ -81,19 +81,17 @@ Abra `http://localhost:8788`.
 - **Build output directory**: `public`
 - **Functions**: `functions`
 
+Se estiver fazendo deploy via Wrangler/CI, use:
+
+```bash
+npx wrangler pages deploy public
+```
+
 Bindings necessários no projeto:
 
 - D1: `DB`
 - R2: `ART_BUCKET`
 - Vars: mesmas do `.dev.vars`
-
-## Deploy (Cloudflare Workers)
-
-Se seu pipeline roda `wrangler deploy`, este projeto também pode ser publicado como **Worker** (servindo os arquivos estáticos de `public/` via `[assets]` e usando o código de `functions/` como handlers):
-
-```bash
-npx wrangler deploy
-```
 
 ## Google OAuth (login YouTube)
 

@@ -1,10 +1,6 @@
 name = 'milhas-page'
 compatibility_date = "2026-03-18"
-main = "src/index.ts"
-
-[assets]
-directory = "./public"
-binding = "ASSETS"
+pages_build_output_dir = "public"
 
 [[d1_databases]]
 binding = "DB"
