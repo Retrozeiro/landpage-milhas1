@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+
+# Cloudflare D1 local DB
+.sqlite/
+
+# OS / Editor
+.DS_Store
+
