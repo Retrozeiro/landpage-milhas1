@@ -26,3 +26,5 @@ SOCIAL_X = ""
 GOOGLE_CLIENT_ID = ""
 GOOGLE_CLIENT_SECRET = ""
 OAUTH_REDIRECT_URL = "http://localhost:8788/auth/callback"
+
+main = "src/index.ts"
