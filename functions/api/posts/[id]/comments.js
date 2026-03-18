@@ -1,5 +1,5 @@
-import { getSession, requireUser } from "../../../../_lib/auth.js";
-import { badRequest, json, methodNotAllowed, notFound } from "../../../../_lib/responses.js";
+import { getSession, requireUser } from "../../../_lib/auth.js";
+import { badRequest, json, methodNotAllowed, notFound } from "../../../_lib/responses.js";
 
 function cleanText(value, max) {
   const s = String(value || "").trim();

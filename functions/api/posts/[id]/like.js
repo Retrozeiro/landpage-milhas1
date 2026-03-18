@@ -1,5 +1,5 @@
-import { requireUser } from "../../../../_lib/auth.js";
-import { badRequest, json, methodNotAllowed, notFound } from "../../../../_lib/responses.js";
+import { requireUser } from "../../../_lib/auth.js";
+import { badRequest, json, methodNotAllowed, notFound } from "../../../_lib/responses.js";
 
 export async function onRequest(context) {
   const { request, env, params } = context;
