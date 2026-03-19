@@ -1,31 +1,5 @@
 name = "landpage-milhas1"
 compatibility_date = "2026-03-18"
-main = "src/index.ts"
 
-[assets]
-directory = "./public"
-binding = "ASSETS"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "milhas-comunidade"
-database_id = "05adbb1e-adf2-4e4b-8b33-c94dd3c225c5"
-
-[[r2_buckets]]
-binding = "ART_BUCKET"
-bucket_name = "milhas-art"
-
-[vars]
-SITE_NAME = "Milhas por hora"
-YOUTUBE_HANDLE = "@Milhasporhora"
-YOUTUBE_CHANNEL_ID = ""
-CONTACT_EMAIL = ""
-ADMIN_EMAILS = ""
-SOCIAL_YOUTUBE = ""
-SOCIAL_INSTAGRAM = ""
-SOCIAL_TIKTOK = ""
-SOCIAL_DISCORD = ""
-SOCIAL_X = ""
-GOOGLE_CLIENT_ID = ""
-GOOGLE_CLIENT_SECRET = ""
-OAUTH_REDIRECT_URL = "http://localhost:8788/auth/callback"
+[site]
+bucket = "./public"

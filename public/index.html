@@ -2,230 +2,165 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <title>Comunidade — Milhas por hora</title>
-    <link rel=stylesheet href=styles.css />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio — Milhas por hora (exibição)</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-
+    <a class="skip" href="#portfolio">Pular para o portfólio</a>
     <header class="header">
       <div class="wrap header__inner">
         <div class="brand">
-          <div class="brand__logo" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 4c11.046 0 20 8.954 20 20S35.046 44 24 44 4 35.046 4 24 12.954 4 24 4Z"
-                class="logo__ring"
-              />
-              <path
-                d="M15 28c2.7 5.1 7.5 8 13 8 4.3 0 8.3-1.8 10.8-5"
-                class="logo__stroke"
-              />
-              <path
-                d="M14.8 18.3c3.2-2.7 7-4.2 10.9-4.2 3.2 0 6.3 1 9 2.8"
-                class="logo__stroke"
-              />
-              <path
-                d="M17 20.5l-3.5 6.2 7.2-.5"
-                class="logo__stroke"
-              />
-            </svg>
-          </div>
-          <div class="brand__text">
-            <div class="brand__title" id="siteName">Milhas por hora</div>
-            <div class="brand__subtitle" id="siteHandle">@Milhasporhora</div>
-          </div>
+          <strong>Milhas por hora</strong>
+          <span>Exposição de arte <span class="muted">(conceito)</span></span>
         </div>
-
-        <nav class="nav" aria-label="Navegação">
-          <a href="#videos">Vídeos</a>
-          <a href="#avisos">Avisos</a>
-          <a href="#comunidade">Comunidade</a>
-          <a href="#redes">Redes</a>
+        <nav class="nav" aria-label="Seções">
+          <a href="#portfolio">Portfolio</a>
+          <a href="#descricao">Sobre</a>
+          <a href="#arte">Galeria</a>
           <a href="#contato">Contato</a>
         </nav>
-
-        <div class="auth" id="auth">
-          <a class="btn btn--primary" id="loginBtn" href="/auth/login">Entrar com YouTube</a>
-        </div>
+        <a class="btn" href="#contato">Agendar conversa</a>
       </div>
     </header>
 
-    <main id="conteudo">
-      <section class="hero">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
         <div class="wrap hero__inner">
-          <div class="hero__copy">
-            <h1>Bem-vindo(a) à comunidade</h1>
-            <p>
-              Um espaço para assistir aos vídeos, acompanhar avisos e compartilhar artes com a galera.
+          <div>
+            <p class="eyebrow">Projeto pessoal</p>
+            <h1 id="hero-title">Estúdio digital para compartilhar artes em destaque</h1>
+            <p class="lead">
+              Um one-pager leve construído para mostrar peças, contar um pouco do processo criativo e explicar como o projeto é hospedado na Cloudflare Pages.
             </p>
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#comunidade">Ver a comunidade</a>
-              <a class="btn btn--ghost" id="ytLink" href="https://www.youtube.com/@Milhasporhora" target="_blank" rel="noreferrer">Ir para o canal</a>
+            <div class="hero__actions">
+              <button class="btn btn--primary" type="button" onclick="scrollToSection('portfolio')">Ver o portfólio</button>
+              <button class="btn btn--ghost" type="button" onclick="scrollToSection('arte')">Explorar galeria</button>
             </div>
-            <div class="hero__hint" id="loginHint" hidden>
-              Para postar e interagir, faça login com sua conta do YouTube (Google).
-            </div>
+            <p class="muted">Hospedado 100% com Cloudflare Pages, pronto para deploy contínuo a partir da pasta <code>public/</code>.</p>
           </div>
-
           <div class="hero__panel">
             <div class="stat">
-              <div class="stat__label">Últimos vídeos</div>
-              <div class="stat__value" id="videosCount">—</div>
+              <span>Destaca arte digital</span>
+              <strong>+30 trabalhos</strong>
             </div>
             <div class="stat">
-              <div class="stat__label">Artes na comunidade</div>
-              <div class="stat__value" id="postsCount">—</div>
+              <span>Tempo médio de montagem</span>
+              <strong>4 dias</strong>
             </div>
-            <div class="stat stat--accent">
-              <div class="stat__label">Avisos</div>
-              <div class="stat__value" id="annCount">—</div>
+            <div class="stat">
+              <span>Pronto para mostrar aos clientes</span>
+              <strong>Cloudflare Pages</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="videos">
+      <section class="section" id="portfolio">
         <div class="wrap">
-          <div class="section__head">
-            <h2>Vídeos</h2>
-            <p>Os mais recentes do canal.</p>
+          <div class="section__header">
+            <h2>História do projeto</h2>
+            <p>Uma narrativa curta para explicar o propósito e o papel da comunidade criativa por trás das artes.</p>
           </div>
-
-          <div class="grid" id="videosGrid">
-            <div class="skeleton card"></div>
-            <div class="skeleton card"></div>
-            <div class="skeleton card"></div>
-          </div>
-
-          <div class="notice" id="videosFallback" hidden>
-            Não consegui carregar automaticamente os vídeos. Use o link do canal ou informe o <code>YOUTUBE_CHANNEL_ID</code> nas variáveis do Cloudflare.
+          <div class="grid three">
+            <article>
+              <h3>Processo</h3>
+              <p>Texturas e composições feitas para expressar o ritmo acelerado de trabalhar com milhas e viagens.</p>
+            </article>
+            <article>
+              <h3>Experiência</h3>
+              <p>Design com tipografias fluidas, grid modular e iluminação suave para destacar cada peça.</p>
+            </article>
+            <article>
+              <h3>Resultados</h3>
+              <p>Versões impressas para mostras, combinações para redes sociais e materiais conceituais para eventos.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="avisos">
-        <div class="wrap">
-          <div class="section__head">
-            <h2>Quadro de avisos</h2>
-            <p>Comunicados fixos e novidades.</p>
+      <section class="section section--alt" id="descricao">
+        <div class="wrap wrap--narrow">
+          <div class="section__header">
+            <h2>O motivo desta vitrine</h2>
+            <p>Sem login, sem backend complexo: apenas conteúdo estático que mostra arte e história.</p>
           </div>
+          <p>
+            O objetivo é demonstrar clareza visual e atenção ao detalhe, usando apenas HTML, CSS e JavaScript leve. As artes são exemplos fictícios para compor o visual do site, enquanto o cabeçalho reforça a proposta de hospedagem em Cloudflare para quem visita o portfólio.
+          </p>
+          <ul class="list">
+            <li>Layout responsivo com foco mobile-first.</li>
+            <li>Textos e CTAs prontos para apresentar a comunidade.</li>
+            <li>Galeria com imagens de exemplo mantidas em fontes públicas.</li>
+          </ul>
+        </div>
+      </section>
 
-          <div class="announcements" id="announcements"></div>
-
-          <form class="form" id="annForm" hidden>
-            <h3>Novo aviso (admin)</h3>
+      <section class="section" id="login-example">
+        <div class="wrap wrap--narrow">
+          <div class="section__header">
+            <h2>Login de demonstração</h2>
+            <p>Um formulário local que simula a autenticação e mantém o estado no aparelho, sem conectar a nenhuma API.</p>
+          </div>
+          <form class="form" id="demoLoginForm">
             <label>
-              Título
-              <input type="text" name="title" required maxlength="120" />
+              Nome
+              <input type="text" name="name" placeholder="Digite seu nome" />
             </label>
             <label>
-              Mensagem
-              <textarea name="body" required rows="4" maxlength="1200"></textarea>
+              E-mail
+              <input type="email" name="email" placeholder="voce@exemplo.com" />
             </label>
-            <label class="check">
-              <input type="checkbox" name="pinned" />
-              Fixar no topo
-            </label>
-            <button class="btn btn--primary" type="submit">Publicar aviso</button>
-            <div class="form__msg" id="annMsg" role="status" aria-live="polite"></div>
+            <button class="btn btn--primary" type="submit">Entrar como visitante</button>
           </form>
-        </div>
-      </section>
-
-      <section class="section" id="comunidade">
-        <div class="wrap">
-          <div class="section__head">
-            <h2>Comunidade</h2>
-            <p>Poste sua arte, curta e comente.</p>
-          </div>
-
-          <form class="form" id="postForm" hidden>
-            <h3>Postar arte</h3>
-            <label>
-              Imagem (PNG/JPG/WEBP/GIF)
-              <input type="file" name="image" accept="image/png,image/jpeg,image/webp,image/gif" required />
-            </label>
-            <label>
-              Legenda
-              <textarea name="caption" rows="3" maxlength="800" placeholder="Fale um pouco sobre a arte..."></textarea>
-            </label>
-            <button class="btn btn--primary" type="submit">Publicar</button>
-            <div class="form__msg" id="postMsg" role="status" aria-live="polite"></div>
-          </form>
-
-          <div class="notice" id="postLoginNotice">
-            Para publicar e interagir, faça <a href="/auth/login">login com sua conta do YouTube</a>.
-          </div>
-
-          <div class="feed" id="feed"></div>
-
-          <div class="center">
-            <button class="btn btn--ghost" id="loadMoreBtn" type="button">Carregar mais</button>
+          <div class="login-status" id="loginStatus">
+            <!-- Conteúdo atualizado via app.js -->
           </div>
         </div>
       </section>
 
-      <section class="section" id="redes">
+      <section class="section" id="arte">
         <div class="wrap">
-          <div class="section__head">
-            <h2>Redes sociais</h2>
-            <p>Siga e entre na comunidade.</p>
+          <div class="section__header">
+            <h2>Exemplos de artes</h2>
+            <p>Imagens fictícias que ilustram o tipo de conteúdo compatível com o projeto.</p>
           </div>
+          <div class="gallery" id="gallery"></div>
+        </div>
+      </section>
 
-          <div class="social" id="social"></div>
+      <section class="section section--grid" aria-labelledby="social-title">
+        <div class="wrap">
+          <div class="section__header">
+            <h2 id="social-title">Onde achar mais</h2>
+            <p>Perfis sociais e canais relacionados para conferir o trabalho ao vivo.</p>
+          </div>
+          <div class="grid social-grid" id="socialLinks"></div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="wrap wrap--narrow">
+          <div class="section__header">
+            <h2>Contato</h2>
+            <p>Perfeito para quem quer ver o projeto completo ou alinhar próximas etapas.</p>
+          </div>
+          <p>
+            <strong>Email:</strong> <a href="mailto:contato@milhasporhora.com">contato@milhasporhora.com</a><br />
+            <strong>Telegram:</strong> <a href="https://t.me/milhasporhora" target="_blank" rel="noreferrer">@milhasporhora</a>
+          </p>
+          <p class="muted">Disponível para apresentações e para manter catalogado como inspiração de portfólio.</p>
         </div>
       </section>
     </main>
 
-    <footer class="footer" id="contato">
+    <footer class="footer">
       <div class="wrap footer__inner">
-        <div class="footer__copy">
-          <h2>Contato</h2>
-          <p>
-            Parcerias, trabalho como animador ou propostas? Envie uma mensagem por aqui.
-          </p>
-          <p class="muted">
-            <span>Resposta via e‑mail:</span>
-            <a id="contactEmail" href="mailto:" class="mono">—</a>
-          </p>
-        </div>
-
-        <form class="form form--compact" id="contactForm">
-          <label>
-            Nome
-            <input type="text" name="name" required maxlength="80" />
-          </label>
-          <label>
-            E-mail
-            <input type="email" name="email" required maxlength="120" />
-          </label>
-          <label>
-            Mensagem
-            <textarea name="message" required rows="4" maxlength="2000"></textarea>
-          </label>
-          <button class="btn btn--primary" type="submit">Enviar</button>
-          <div class="form__msg" id="contactMsg" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-
-      <div class="wrap footer__bottom">
-        <div class="muted">© <span id="year"></span> <span id="siteName2">Milhas por hora</span></div>
-        <div class="muted">Feito com Cloudflare Pages</div>
+        <span>© <span id="year"></span> Milhas por hora — hospedado com Cloudflare Pages.</span>
+        <span>Conteúdo de exibição.</span>
       </div>
     </footer>
-
-    <div class="modal" id="videoModal" hidden>
-      <div class="modal__backdrop" data-close="1"></div>
-      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Vídeo">
-        <button class="modal__close" type="button" aria-label="Fechar" data-close="1">×</button>
-        <div class="modal__frame" id="modalFrame"></div>
-      </div>
-    </div>
 
     <script type="module" src="/app.js"></script>
   </body>
 </html>
-
