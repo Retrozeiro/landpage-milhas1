@@ -27,4 +27,9 @@ Link dos perfis usados neste showcase:
 - [Instagram (@_milhasporhora)](https://www.instagram.com/_milhasporhora)
 - [TikTok (@milhasporhora)](https://www.tiktok.com/@milhasporhora)
 
+### O que você encontra aqui
+- Cards dos últimos vídeos com descrição, duração e link direto para o YouTube do canal.
+- Galeria com imagens públicas renováveis (botão “Renovar imagens”) e animações suaves nas transições.
+- Layout todo estilizado com detalhes em glow e movimentos leves para lembrar um estúdio de desenho.
+
 Após conectar o repositório ao Vercel ou rodar `vercel --prod`, o site fica disponível para mostrar o trabalho de animação em seu portfólio.

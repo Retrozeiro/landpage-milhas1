@@ -35,9 +35,24 @@ const heroStats = [
 ];
 
 const latestVideos = [
-  { title: "Refiz o Team Dark com animações novas", duration: "9:01" },
-  { title: "Criando o Vilgax absoluto", duration: "8:05" },
-  { title: "Novo visual para o Sonic, vibe clássica", duration: "8:08" },
+  {
+    videoId: "zUzYHVI7BLo",
+    title: "Refiz o Team Dark com animações novas",
+    duration: "9:01",
+    description: "Um remake vibrante da equipe Dark, com novos traços, cores fortes e cortes dinâmicos.",
+  },
+  {
+    videoId: "NeN6ljSiqCw",
+    title: "Criando o Vilgax absoluto",
+    duration: "8:05",
+    description: "Os bastidores do vilão em versão épica, entre sketch e sombreamento manual.",
+  },
+  {
+    videoId: "fp0gLp__XZM",
+    title: "Novo visual para o Sonic, vibe clássica",
+    duration: "8:08",
+    description: "Estudo de personagens com referências ao Sonic dos anos 2000.",
+  },
 ];
 
 const socialLinks = [
@@ -97,6 +112,10 @@ function App() {
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  }, []);
+
+  const refreshGallery = useCallback(() => {
+    setGallerySeed(Math.random());
   }, []);
 
   return (
@@ -164,10 +183,13 @@ function App() {
             </div>
             <div className="video-grid">
               {latestVideos.map((video) => (
-                <article key={video.title} className="video-card">
+                <article key={video.videoId} className="video-card">
                   <div className="video-card__badge">{video.duration}</div>
                   <h3>{video.title}</h3>
-                  <p>Observação rápida sobre conceitos, personagens e referências em cada corte.</p>
+                  <p>{video.description}</p>
+                  <a className="video-card__link" href={`https://www.youtube.com/watch?v=${video.videoId}`} target="_blank" rel="noreferrer">
+                    Assistir no YouTube
+                  </a>
                 </article>
               ))}
             </div>
@@ -257,16 +279,23 @@ function App() {
               <p>Imagens fictícias que ilustram o conteúdo compatível com o canal.</p>
             </div>
             <div className="gallery">
-              {galleryItems.map((piece) => (
-                <article key={piece.title} className="gallery__item">
-                  <img src={piece.image} alt={piece.title} loading="lazy" referrerPolicy="no-referrer" />
-                  <div className="gallery__body">
-                    <h3>{piece.title}</h3>
-                    <p>{piece.description}</p>
-                    <small className="muted">{piece.tag}</small>
-                  </div>
-                </article>
-              ))}
+              <div className="gallery__controls">
+                <button type="button" className="gallery__refresh" onClick={refreshGallery}>
+                  Renovar imagens
+                </button>
+              </div>
+              <div className="gallery__grid">
+                {galleryItems.map((piece) => (
+                  <article key={piece.title} className="gallery__item">
+                    <img src={piece.image} alt={piece.title} loading="lazy" referrerPolicy="no-referrer" />
+                    <div className="gallery__body">
+                      <h3>{piece.title}</h3>
+                      <p>{piece.description}</p>
+                      <small className="muted">{piece.tag}</small>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
