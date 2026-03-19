@@ -232,7 +232,8 @@ function openVideo(videoId) {
   };
   const onClick = (e) => {
     const t = e.target;
-    if (t && t.dataset && t.dataset.close) close();
+    const el = t instanceof Element ? t : t?.parentElement;
+    if (el?.closest?.("[data-close]")) close();
   };
   document.addEventListener("keydown", onKey);
   modal.addEventListener("click", onClick);
