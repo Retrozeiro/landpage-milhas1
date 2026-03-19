@@ -1,8 +1,8 @@
 name = "landpage-milhas1"
 compatibility_date = "2026-03-18"
-main = "src/index.ts" # Certifique-se que este arquivo existe
 
-# Substitua o pages_build_output_dir por isso:
+# Remova a linha "main = ..." se você não tem um script de backend no Worker
+
 [assets]
 directory = "./public"
 
