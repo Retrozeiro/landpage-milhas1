@@ -127,7 +127,7 @@ function App() {
         <div className="wrap header__inner">
           <div className="brand">
             <strong>Milhas por hora</strong>
-            <span>Youtuber de animação</span>
+            <span> Youtuber de animação</span>
           </div>
           <nav className="nav" aria-label="Seções">
             <button type="button" className="link" onClick={() => scrollToSection("portfolio")}>Portfolio</button>
