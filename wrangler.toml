@@ -1,6 +1,10 @@
 name = "landpage-milhas1"
 compatibility_date = "2026-03-18"
-pages_build_output_dir = "public"
+main = "src/index.ts" # Certifique-se que este arquivo existe
+
+# Substitua o pages_build_output_dir por isso:
+[assets]
+directory = "./public"
 
 [[d1_databases]]
 binding = "DB"
