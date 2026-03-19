@@ -1,10 +1,5 @@
-node_modules/
-.wrangler/
-.dev.vars
-
-# Cloudflare D1 local DB
-.sqlite/
-
-# OS / Editor
+node_modules
+npm-debug.log*
 .DS_Store
-
+dist
+.env

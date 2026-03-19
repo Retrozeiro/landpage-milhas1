@@ -1,39 +1,30 @@
-# Comunidade — Milhas por hora (exibição)
+# Milhas por hora — Portfolio React
 
-Portfólio estático que mostra uma vitrine de artes e informações rápidas sobre o projeto, hospedado com Cloudflare Pages. Todo o conteúdo é fictício e pensado apenas para exibição: não há login, banco de dados ou upload de imagens, apenas HTML/CSS/JS carregado a partir da pasta `public/`.
+Landing page construída com Vite + React para mostrar o universo de um Youtuber focado em animações, fanarts e timelapses (com base nos canais e redes do Milhas por hora).
 
 ## Rodar localmente
 
 1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Abra `http://localhost:5173` no navegador e navegue pelas seções de hero, vídeos e galeria.
 
-```bash
-npm install
-```
+Não há autenticação real: o formulário de login apenas salva nome/e-mail no `localStorage` para ilustrar um estado conectado no front-end.
 
-2. Inicie o servidor Pages emulando a pasta `public/`:
+## Deploy no Vercel
 
-```bash
-npm run dev
-```
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+- **Framework preset:** Vite
 
-3. Acesse `http://localhost:8788` para ver o site.
+Link dos perfis usados neste showcase:
+- [YouTube (Milhas por hora)](https://www.youtube.com/@Milhasporhora)
+- [Instagram (@_milhasporhora)](https://www.instagram.com/_milhasporhora)
+- [TikTok (@milhasporhora)](https://www.tiktok.com/@milhasporhora)
 
-## Deploy (Cloudflare Pages)
-
-- **Command**: deixe em branco (build não necessário).
-- **Output**: `public`
-- **Funções**: não há (não existe `functions/`).
-
-Para deploy via CLI use:
-
-```bash
-npx wrangler pages deploy public
-```
-
-## Sobre o conteúdo
-
-- Layout responsivo com seções de hero, portfólio, galeria e contato.
-- Galeria preenchida dinamicamente com artes fictícias usando `app.js`.
-- Sessão de login local que salva nome/e-mail no navegador para ilustrar autenticação sem APIs.
-- Imagens da galeria trocadas aleatoriamente a cada carregamento para dar variedade ao portfólio.
-- Texto e CTAs prontos para exibição em um portfólio profissional ou apresentação.
+Após conectar o repositório ao Vercel ou rodar `vercel --prod`, o site fica disponível para mostrar o trabalho de animação em seu portfólio.
