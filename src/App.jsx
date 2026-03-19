@@ -126,7 +126,7 @@ function App() {
       <header className="header">
         <div className="wrap header__inner">
           <div className="brand">
-            <strong>Milhas por hora</strong>
+            <strong>Milhas por hora </strong>
             <span> Youtuber de animação</span>
           </div>
           <nav className="nav" aria-label="Seções">
